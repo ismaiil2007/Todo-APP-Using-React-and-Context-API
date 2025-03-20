@@ -22,7 +22,7 @@ const handleTodo = (e) =>{
 
   return (
     <>
-    <form onSubmit={handleTodo}>
+    <form onSubmit={handleTodo} className='flex'>
     <input 
     className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
     type="text" 
