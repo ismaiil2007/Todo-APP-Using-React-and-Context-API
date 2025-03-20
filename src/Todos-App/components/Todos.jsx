@@ -85,7 +85,7 @@ const Todos = () => {
       {todos.map((item, index) => {
         return (
           <div
-            className={`w-full justify-between  flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
+            className={`w-full  justify-between h-auto  flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
               item.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
             }`}
           >
@@ -100,7 +100,7 @@ const Todos = () => {
                 editingId == index ? ( //These round brackets are not necessary
                   <input
                     type="text"
-                    className={`border outline-none w-full bg-transparent rounded-lg ${
+                    className={`border outline-none w-full bg-transparent  rounded-lg  ${
                       editingId == index
                         ? "border-black/10 px-2"
                         : "border-transparent"
@@ -113,8 +113,8 @@ const Todos = () => {
                     }}
                   />
                 ) : (
-                  <div key={index}>
-                    {item.completed ? <del>{item.title}</del> : item.title}
+                  <div className="w-full max-w-100  " style={{  overflowWrap: 'break-word' }}key={index}>
+                    {item.completed ? <del >{item.title}</del> : item.title}
                   </div>
                 )
               }
